@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'M PLUS Rounded 1c', Avenir Next, Helvetica, sans-serif;
+    color: white;
+}
+body{
+    display: flex;
+    background-color: #8990ec;
+    /*position: relative;*/
+}
+.wrapper{
+    margin: 100px auto;
+    background-color: #272639;
+    height: inherit;
+    width: 700px;
+    padding: 1.2rem;
+    border-radius: 1rem;
+    color: white;
+}
+.inputContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.start{
+    padding-left: inherit;
+    padding-right: inherit;
+
+}
+#temp-input{
+    width: inherit;
+justify-content: space-around;
+    font-size: 1.2rem;
+    background: white;
+    padding: 5px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    color: #272639;
+    font-weight: bolder;
+}
+.container{
+    margin-top: 1.4rem;
+}
+#title{
+    text-align: center;
+    font-weight: bolder;
+    margin-bottom: 0.6rem;
+    font-size: 1.5rem;
+}
+ #title i{
+margin: 10px;
+ }
+
+ .border{
+     border: 2px solid white;
+ }
+
+ .border:hover{
+     border: 2px solid rgba(255,255,255,0.4);
+
+ }
+
+
+label{
+display: flex;
+justify-content: center;
+}
+
+#FromTemperature,#toTemperature{
+    font-family: 'M PLUS Rounded 1c', Avenir Next, Helvetica, sans-serif;
+    font-size: 1rem;
+    background: #353959;
+    border: none;
+    outline: none;
+    width: 300px;
+    padding: 5px;
+    border-radius: 10px;
+}
+select option{
+    font-family: 'M PLUS Rounded 1c', Avenir Next, Helvetica, sans-serif;
+}
+.middle{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: space-evenly;
+}
+
+.buttonText {
+    color: #353959 !important;
+}
+.splitButton {
+    background: none;
+    border: none;
+}
+.buttonContainer {
+    border: none;
+    text-align: center;
+    margin-left: 10px;
+    background: #8990ec;
+    place-items: center;
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 50%;
+}
+
+.end{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.end button{
+    position: relative;
+    text-align: center;
+    background-color: #353959;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    padding: 5px;
+    font-size: 1.2rem ;
+    width:110px;
+    margin-right: 2%;
+}
+
+.answerContainer{
+    display: block ;
+    font-size: 1.3rem;
+    position: relative;
+    border-radius: 5%;
+    margin-top: 3%;
+    text-align: center;
+}
+.inc_dec{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.total {
+    font-size: 2rem;
+}
+@media (max-width: 760px){
+    .wrapper{
+        width: inherit;
+        height: inherit;
+    }
+
+    .inc_dec{
+margin: 10px auto;
+    }
+}

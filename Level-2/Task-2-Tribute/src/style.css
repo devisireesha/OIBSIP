@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+}
+
+section {
+    background-color: white;
+}
+
+.first-section {
+    background-color: #A17A69;
+    height: 100vh;
+    color: white;
+    font-size: 40px;
+}
+.slider {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slider img:first-child {
+    opacity: 1;
+}
+
+@keyframes slide {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 1;
+    }
+    45% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    70% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 1;
+    }
+    95% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.slider img:nth-child(1) {
+    animation: slide 20s infinite;
+}
+
+.slider img:nth-child(2) {
+    animation: slide 20s infinite 5s;
+}
+
+.slider img:nth-child(3) {
+    animation: slide 20s infinite 10s;
+}
+
+.slider img:nth-child(4) {
+    animation: slide 20s infinite 15s;
+}
+
+.slider img:nth-child(5) {
+    animation: slide 20s infinite 20s;
+}
+
+
+.second-section {
+    padding: 20px;
+    text-align: center;
+    background-color: #B5927F;
+    color: #24262b;
+    font-size: 40px;
+}
+
+.second-section p {
+    padding: 20px;
+    font-weight: bolder;
+}
+
+.second-section span {
+    letter-spacing: -0.10px;
+    font-weight: 500;
+    font-size: 30px;
+}
+
+.third-section {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.slider-container {
+    display: flex;
+    width: 500%; /* Adjust this value based on the number of images */
+    animation: thirdSectionSlider 20s infinite;
+}
+
+.slider-content {
+    display: flex;
+    width: 100%;
+    object-fit: cover;
+}
+
+.slider-content img {
+    flex: 0 0 auto;
+    object-fit: cover;
+    width: 20%;
+    animation: thirdSectionSlideImages 20s infinite;
+}
+
+@keyframes thirdSectionSlider {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-80%);
+    }
+}
+
+@keyframes thirdSectionSlideImages {
+    19%, 22%, 39%, 42%, 59%, 62%, 79%, 82% {
+        opacity: 1;
+    }
+}
+
+
+h3 {
+    background-color: white;
+    border: solid #24262b 5px;
+    position: relative;
+    padding: 20px;
+    font-weight: 700;
+    text-align: center;
+    color: #24262b;
+    border-radius: 5px;
+}
+.fourth-section {
+    text-align: center;
+    background-color: #DABCB2;
+    color: #24262b;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    color: #d5b8ae;
+    background-color: #572121;
+    font-size: 60px;
+}
+
+.fourth-content {
+    padding: 20px;
+}
+#para {
+    padding: 100px;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+
+@media (max-width: 15000px) {
+    img {
+        width: 100%;
+        height: 100vh;
+    }
+}

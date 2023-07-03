@@ -1,0 +1,73 @@
+<!Doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <title>Temperature Calculator</title>
+</head>
+<body>
+<form class="wrapper">
+    <div class="container" >
+        <div id="title">Temperature Converter<i class="fa-solid fa-temperature-low"></i></div>
+    </div>
+    <div class="start">
+        <div class="container">
+            <div class="inputContainer">
+                <label for="temp-input">Enter the Temperature:</label>
+                <input id="temp-input" type="text"  placeholder= "" />
+                <div class="inc_dec">
+                        <span class="buttonContainer border">
+                            <button class="splitButton increment">
+                                <span class="buttonText">+</span>
+                            </button>
+                        </span>
+                    <span class="buttonContainer border">
+                            <button class="splitButton decrement">
+                                <span class="buttonText">-</span>
+                            </button>
+                        </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="middle">
+        <div class="container">
+            <label for="FromTemperature">From</label>
+            <select id="FromTemperature" >
+                <option value ="">Choose One</option>
+                <option value ="celsius">celsius</option>
+                <option value ="fahrenheit">fahrenheit</option>
+                <option value ="kelvin">kelvin</option>
+            </select>
+        </div>
+        <div class="container">
+            <label for="toTemperature">To</label>
+            <select id="toTemperature">
+                <option value ="">Choose One</option>
+                <option value ="celsius">celsius</option>
+                <option value ="fahrenheit">fahrenheit</option>
+                <option value ="kelvin">kelvin</option>
+            </select>
+        </div>
+    </div>
+    <div class="container"></div>
+    <div class="end">
+        <button type="button" id ="All_clear" class="btn border">All Clear</button>
+        <button type="submit" id="convert" class="btn border" >Convert</button>
+    </div>
+    <div>
+        <div class="answerContainer">
+            <div class="title">Temperature:</div>
+            <div class="total" id="result">0</div>
+        </div>
+    </div>
+</form>
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
