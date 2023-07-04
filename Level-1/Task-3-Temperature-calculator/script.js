@@ -34,34 +34,32 @@ const calcTemp = (e) => {
     }
 
     let convertedTemp = 0;
-
-    if (fromUnit === 'celsius' && toUnit === 'fahrenheit') {
-        convertedTemp = (temperature * 9 / 5) + 32;
-    } else if (fromUnit === 'celsius' && toUnit === 'kelvin') {
-        convertedTemp = temperature + 273.15;
-    } else if (fromUnit === 'fahrenheit' && toUnit === 'celsius') {
-        convertedTemp = (temperature - 32) * 5 / 9;
-    } else if (fromUnit === 'fahrenheit' && toUnit === 'kelvin') {
-        convertedTemp = (temperature - 32) * 5 / 9 + 273.15;
-    } else if (fromUnit === 'kelvin' && toUnit === 'celsius') {
-        convertedTemp = temperature - 273.15;
-    } else if (fromUnit === 'kelvin' && toUnit === 'fahrenheit') {
-        convertedTemp = (temperature - 273.15) * 9 / 5 + 32;
-    } else {
-        document.getElementById("result").textContent = "Unsupported conversion";
-        return;
-    }
-
-    let resultString = `Converted temperature: ${convertedTemp.toFixed(2)}`;
+    let fromSymbol = '';
+    let toSymbol = '';
 
     if (fromUnit === 'celsius') {
-        resultString += ' °C';
+        convertedTemp = temperature;
+        fromSymbol = '°C';
     } else if (fromUnit === 'fahrenheit') {
-        resultString += ' °F';
+        convertedTemp = (temperature - 32) * 5 / 9;
+        fromSymbol = '°F';
     } else if (fromUnit === 'kelvin') {
-        resultString += ' K';
+        convertedTemp = temperature - 273.15;
+        fromSymbol = 'K';
     }
 
+    if (toUnit === 'celsius') {
+        convertedTemp = convertedTemp;
+        toSymbol = '°C';
+    } else if (toUnit === 'fahrenheit') {
+        convertedTemp = convertedTemp * 9 / 5 + 32;
+        toSymbol = '°F';
+    } else if (toUnit === 'kelvin') {
+        convertedTemp = convertedTemp + 273.15;
+        toSymbol = 'K';
+    }
+
+    let resultString = `Converted temperature: ${convertedTemp.toFixed(2)} ${toSymbol}`;
     document.getElementById("result").textContent = resultString;
 };
 
